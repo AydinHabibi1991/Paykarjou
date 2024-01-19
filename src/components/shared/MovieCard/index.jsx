@@ -1,17 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import { CiPlay1 } from 'react-icons/ci';
+import { useRouter } from 'next/router';
 
 const MovieCard = ({ movie, width = 350, height = 370 }) => {
+  const router = useRouter();
   return (
     <div
       className="overflow-hidden max-w-xs basis-52 flex flex-col gap-3 text-txt_primary cursor-pointer"
       style={{ minWidth: `${width}px`, maxHeight: `${height}px` }}
+      onClick={() => router.push(`/film/${movie.id}`)}
     >
       <div className="relative rounded-md overflow-hidden">
         <div>
           <Image
-            src={movie?.src || '/assets/images/videocover.png'}
+            src={movie?.cover || '/assets/images/videocover.png'}
             width={width}
             height={height}
             alt={movie?.title}

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import MovieCard from '@/components/shared/MovieCard';
-import request from './../../lib/config';
+import request from '../../lib/config';
 
 const movies = [
   {

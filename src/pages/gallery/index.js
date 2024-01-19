@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Carousel from '../../components/Carousel/index.js';
 import MainLayout from '../../layout/MainLayout.jsx'; 
+import request from './../../lib/config';
 
-function Gallery() {
+function Gallery({ gallery }) {
   return (
     <div>
       {/* <Head>
@@ -12,8 +13,7 @@ function Gallery() {
       </Head> */}
 
       <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-secondary">
-        
-        <Carousel />
+        <Carousel gallery={gallery} />
       </main>
     </div>
   );
@@ -24,3 +24,20 @@ Gallery.getLayout = function getLayout(page) {
 };
 
 export default Gallery;
+
+export const getServerSideProps = async () => {
+  let gallery;
+  try {
+    gallery = await request('/gallery/index');
+  } catch (error) {
+    console.log(JSON.stringify(error, null, 2));
+  }
+  console.log(gallery?.data?.data);
+  return {
+    props: {
+      gallery: gallery?.data?.data?.data?.filter(
+        (item) => item.type === 'image'
+      ),
+    },
+  };
+};

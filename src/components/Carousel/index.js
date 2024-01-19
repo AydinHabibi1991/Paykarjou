@@ -7,16 +7,16 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Image from 'next/image'; 
 import Mass from '../mass';
 
-export default function Carousel() {
+export default function Carousel({ gallery }) {
   return (
-<div className="h-full bg-secondary font-sans relative">
+    <div className="h-full w-full overflow-hidden bg-secondary font-sans relative">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
         coverflowEffect={{
-          rotate:30,
+          rotate: 30,
           stretch: 10,
           depth: 100,
           modifier: 1,
@@ -26,20 +26,24 @@ export default function Carousel() {
         modules={[EffectCoverflow, Pagination]}
         className="my-12"
       >
-      
-        {[...Array(4).keys()].map(i => (
-           <SwiperSlide key={i} style={{ width: '500px', height: '500px' }}>
-         <Image 
-  src={`/assets/images/${i + 1}.png`}  
-  alt={`Nature ${i + 1}`} 
-  width={300} 
-  height={300} 
-  className="block w-full"
-/>
-         </SwiperSlide>
-        ))}
+        {gallery?.length &&
+          gallery.map((i) => (
+            <SwiperSlide
+              key={i?.id}
+              style={{ width: '400px', height: '500px' }}
+            >
+              <Image
+                src={i?.url || `/assets/images/${i + 1}.png`}
+                alt={i?.title || `Nature ${i + 1}`}
+                // width={300}
+                // height={300}
+                className="block w-full"
+                layout="fill"
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
-      <Mass className='absolute  z-10'/>
+      <Mass />
     </div>
   );
 }

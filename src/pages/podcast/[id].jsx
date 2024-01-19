@@ -87,8 +87,8 @@ const audios = [
   },
 ];
 
-function SinglePodcast({ audio }) {
-  audio = audios[0];
+function SinglePodcast({ audio, audios }) {
+  // audio = audios[0];
   const waveformRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioDuration, setAudioDuration] = useState(0);
@@ -117,7 +117,8 @@ function SinglePodcast({ audio }) {
       barRadius: 5,
     });
     ws.load(
-      'https://www.mfiles.co.uk/mp3-downloads/brahms-symphony3-3-theme-violin-piano.mp3'
+      audio?.url ||
+        'https://www.mfiles.co.uk/mp3-downloads/brahms-symphony3-3-theme-violin-piano.mp3'
     );
     setAudioDuration(ws.getDuration());
     setWavesurfer(ws);
@@ -140,7 +141,7 @@ function SinglePodcast({ audio }) {
           >
             <div className="w-full overflow-hidden relative rounded-sm space-y-2">
               <Image
-                src={audio.image}
+                src={audio.cover}
                 alt="alt"
                 width={1400}
                 height={400}
@@ -216,3 +217,23 @@ function SinglePodcast({ audio }) {
 }
 
 export default SinglePodcast;
+
+export const getServerSideProps = async ({ params }) => {
+  let gallery;
+  let item;
+  try {
+    gallery = await request('/gallery/index');
+    item = await request(`/gallery/get/${params.id}`);
+  } catch (error) {
+    console.log(JSON.stringify(error, null, 2));
+  }
+  console.log(item);
+  return {
+    props: {
+      audios: gallery?.data?.data?.data?.filter(
+        (item) => item.type === 'music'
+      ),
+      audio: item?.data?.data,
+    },
+  };
+};

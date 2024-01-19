@@ -14,7 +14,7 @@ const AudioCard = ({ audio, width = 500, height = 400 }) => {
     >
       <div className="w-full overflow-hidden relative rounded-sm space-y-2">
         <Image
-          src={audio?.image || '/assets/images/image8.png'}
+          src={audio?.cover || '/assets/images/image8.png'}
           alt="alt"
           width={width}
           height={height}
