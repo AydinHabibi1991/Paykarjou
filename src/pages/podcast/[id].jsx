@@ -2,14 +2,15 @@ import AudioCard from '@/components/shared/AudioCard';
 import React, { useRef, useCallback, useState, useEffect } from 'react';
 import { CiPlay1, CiPause1 } from 'react-icons/ci';
 import { BsClock } from 'react-icons/bs';
-import AudioProgress from '@/utils/AudioProgress';
+// import AudioProgress from '@/utils/AudioProgress';
 import Image from 'next/image';
-import useAudioPlayer from '@/hooks/useAudio';
+// import useAudioPlayer from '@/hooks/useAudio';
 import Button from '@/components/shared/Button';
 import WaveSurfer from 'wavesurfer.js';
-
+import request from './../../lib/config';
 // const WaveSurfer = dynamic(() => import('wavesurfer.js'));
 const audios = [
+
   {
     duration: '11:45',
     image: '/assets/images/image8.png',
@@ -88,12 +89,13 @@ const audios = [
 ];
 
 function SinglePodcast({ audio, audios }) {
+
+  console.log(audio);
   // audio = audios[0];
   const waveformRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioDuration, setAudioDuration] = useState(0);
   const [wavesurfer, setWavesurfer] = useState();
-  console.log(audioDuration);
   // On play button click
   const onPlayClick = () => {
     if (isPlaying) {
@@ -128,27 +130,25 @@ function SinglePodcast({ audio, audios }) {
   }, []);
 
   return (
-    <div className="bg-secondary flex items-start justify-center h-full pb-6 text-txt_primary pt-16">
+    <div className="bg-secondary min-h-screen flex items-start justify-center h-full pb-6 text-txt_primary pt-16">
       <div className="w-[85%] h-full flex flex-col items-start justify-start gap-6 z-40">
         <div className="w-full flex flex-col items-start justify-center gap-4">
           <div className="flex flex-col items-start gap-2 ">
             <span>رادیو اقتصاد</span>
-            <h1 className="text-2xl font-semibold">{audio.title}</h1>
+            <h1 className="text-2xl font-semibold">{audio?.title}</h1>
           </div>
           <div
-            style={{ maxWidth: `${1400}px`, maxHeight: '400px' }}
-            className={`max-w-sm max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between`}
+            className={`w-full p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between`}
           >
-            <div className="w-full overflow-hidden relative rounded-sm space-y-2">
+            <div className="w-full h-80 overflow-hidden relative rounded-sm space-y-2">
               <Image
-                src={audio.cover}
+                src={audio?.cover || ''}
                 alt="alt"
-                width={1400}
-                height={400}
+                layout='fill'
                 //   style={{ width: '100%', height: '100%' }}
               />
               <div className="flex items-start flex-col gap-2">
-                <div className="text-primary"> {audio.title}</div>
+                <div className="text-primary"> {audio?.title}</div>
                 <div className="text-primary w-full flex items-center justify-between ">
                   <div className="flex items-center gap-1">
                     <BsClock size={24} />
@@ -223,17 +223,17 @@ export const getServerSideProps = async ({ params }) => {
   let item;
   try {
     gallery = await request('/gallery/index');
-    item = await request(`/gallery/get/${params.id}`);
+    item = await request(`/gallery/get/${+params.id}`);
   } catch (error) {
     console.log(JSON.stringify(error, null, 2));
   }
-  console.log(item);
+  console.log("hear",item);
   return {
     props: {
       audios: gallery?.data?.data?.data?.filter(
-        (item) => item.type === 'music'
-      ),
-      audio: item?.data?.data,
+        (item) => item.type === 'podcast'
+      ) || [],
+      audio: item?.data?.data || {},
     },
   };
 };

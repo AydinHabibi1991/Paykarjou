@@ -115,7 +115,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       podcasts: gallery?.data?.data?.data?.filter(
-        (item) => item.type === 'music'
+        (item) => item.type === 'podcast'
       ),
     },
   };

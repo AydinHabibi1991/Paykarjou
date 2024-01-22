@@ -8,18 +8,16 @@ const MovieCard = ({ movie, width = 350, height = 370 }) => {
   return (
     <div
       className="overflow-hidden max-w-xs basis-52 flex flex-col gap-3 text-txt_primary cursor-pointer"
-      style={{ minWidth: `${width}px`, maxHeight: `${height}px` }}
       onClick={() => router.push(`/film/${movie.id}`)}
     >
-      <div className="relative rounded-md overflow-hidden">
-        <div>
-          <Image
-            src={movie?.cover || '/assets/images/videocover.png'}
-            width={width}
-            height={height}
-            alt={movie?.title}
-          />
-        </div>
+      <div className="relative rounded-md max-w-xs basis-52 overflow-hidden">
+        <Image
+          src={movie?.cover || '/assets/images/videocover.png'}
+          width={width}
+          height={height}
+          alt={movie?.title}
+        />
+
         <div className="text-primary absolute top-5 left-5 flex items-center gap-1 p-2 justify-between bg-secondary rounded-xl bg-opacity-90">
           <div>
             <svg

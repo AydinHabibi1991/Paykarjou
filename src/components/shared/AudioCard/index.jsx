@@ -4,15 +4,18 @@ import { CiPlay1, CiPause1 } from 'react-icons/ci';
 import { BsClock } from 'react-icons/bs';
 import Button from '../Button';
 import AudioProgress from '@/utils/AudioProgress';
+import { useRouter } from 'next/router';
 
-const AudioCard = ({ audio, width = 500, height = 400 }) => {
+const AudioCard = ({ audio, width = 350, height = 370 }) => {
   // const [isPlaying, setIsPlaying] = useState(false);
+  const router = useRouter();
+
   return (
     <div
-      style={{ maxWidth: `${width}px`, maxHeight: `${height}px` }}
+      onClick={() => router.push(`/podcast/${audio.id}`)}
       className={`max-w-sm max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between cursor-pointer`}
     >
-      <div className="w-full overflow-hidden relative rounded-sm space-y-2">
+      <div className="max-w-sm basis-52 overflow-hidden relative rounded-sm space-y-2">
         <Image
           src={audio?.cover || '/assets/images/image8.png'}
           alt="alt"

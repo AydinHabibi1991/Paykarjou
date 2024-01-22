@@ -111,7 +111,9 @@ export const getServerSideProps = async ({ params }) => {
   console.log(item);
   return {
     props: {
-      films: gallery?.data?.data?.data?.filter((item) => item.type === 'video'),
+      films:
+        gallery?.data?.data?.data?.filter((item) => item.type === 'video') ||
+        [],
       film: item?.data?.data,
     },
   };

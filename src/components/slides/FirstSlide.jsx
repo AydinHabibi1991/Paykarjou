@@ -29,11 +29,12 @@ const FirstSlide = ({categories, handleNext, handlePrev }) => {
             <h3 className="font-semibold text-xl">خوشبختم از آشنایی شما</h3>
           </div>
           <div className="flex items-center flex-wrap gap-5">
-          {categories.map((article) => (
+            {categories.map((article) => (
               <Button
-                key={article.id}
-                title={article.label}
-                icon={article.icon}
+                key={article?.id}
+                title={article?.label}
+                icon={article?.icon}
+                isCategory
                 className="flex items-center justify-start pr-4 flex-grow basis-60 gap-3 p-2 border border-primary rounded-full hover:text-secondary hover:bg-primary"
               />
             ))}
