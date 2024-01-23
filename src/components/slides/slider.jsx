@@ -92,7 +92,7 @@ export const audios = [
   },
 ];
 
-export default function Slider({ categories }) {
+export default function Slider({ categories, audios, movies }) {
   const sliderRef = useRef(null);
 
   const handlePrev = useCallback(() => {
@@ -124,24 +124,28 @@ export default function Slider({ categories }) {
         className="mySwiper"
       >
         <SwiperSlide>
-        <FirstSlide categories={categories} handleNext={handleNext} handlePrev={handlePrev} />
+          <FirstSlide
+            categories={categories}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
         </SwiperSlide>
         {categories.map((slide) => {
-  console.log(slide.short_description);
+          console.log(slide.short_description);
 
-  return (
-    <SwiperSlide key={slide.title}>
-      <Slides
-        categories={categories}
-        img={slide.img}
-        title={slide.label} 
-        desc={slide.short_description}
-        handleNext={handleNext}
-        handlePrev={handlePrev}
-      />
-    </SwiperSlide>
-  );
-})}
+          return (
+            <SwiperSlide key={slide.title}>
+              <Slides
+                categories={categories}
+                img={slide.img}
+                title={slide.label}
+                desc={slide.short_description}
+                handleNext={handleNext}
+                handlePrev={handlePrev}
+              />
+            </SwiperSlide>
+          );
+        })}
         <SwiperSlide>
           <Movies
             movies={movies}

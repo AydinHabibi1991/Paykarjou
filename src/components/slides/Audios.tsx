@@ -4,8 +4,10 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Button from './../shared/Button/index';
 import MovieCard from '../shared/MovieCard';
 import AudioCard from '../shared/AudioCard';
+import { useRouter } from 'next/router';
 
 const Audios = ({ audios, handleNext, handlePrev }) => {
+  const router = useRouter();
   return (
     <div className="bg-secondary flex items-start justify-center h-screen text-txt_primary pt-16">
       <div className="w-[85%] h-full flex flex-col items-start justify-start gap-4 z-40">
@@ -15,6 +17,7 @@ const Audios = ({ audios, handleNext, handlePrev }) => {
             <h1 className="text-2xl font-semibold">آخرین پادکست ها</h1>
           </div>
           <Button
+            onClick={() => router.push('/podcast')}
             title={'مشاهده همه'}
             className="flex items-center text-primary justify-start p-2 border border-primary rounded-full hover:text-secondary hover:bg-primary"
           />
@@ -32,9 +35,10 @@ const Audios = ({ audios, handleNext, handlePrev }) => {
           />
         </div>
         <div className="w-full grid grid-cols-3 gap-2">
-          {audios.map((audio) => (
-            <AudioCard key={audio.title} audio={audio} />
-          ))}
+          {audios.map(
+            (audio, index) =>
+              index < 6 && <AudioCard key={audio.id} audio={audio} />
+          )}
         </div>
       </div>
       <div className="w-full h-52 bg-primary absolute bottom-[25%] flex flex-col items-center justify-between p-5 "></div>
