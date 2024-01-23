@@ -11,6 +11,9 @@ module.exports = {
       yekan: ['yekan', ...defaultTheme.fontFamily.sans],
     },
     extend: {
+      boxShadow: {
+        'curve': '0 30px 30px rgba(0, 0, 0, 0.2)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

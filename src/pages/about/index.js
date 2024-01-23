@@ -155,3 +155,18 @@ export default About;
 About.getLayout = function getLayout(page) {
   return <MainLayout>{page}</MainLayout>;
 };
+
+export const getServerSideProps = async () => {
+  let aboutUs;
+  try {
+    aboutUs = await request('/custom/about-us/get');
+  } catch (error) {
+    console.log(JSON.stringify(error, null, 2));
+  }
+  console.log(aboutUs?.data?.data);
+  return {
+    props: {
+      aboutUs: aboutUs?.data?.data?.data
+    },
+  };
+};
