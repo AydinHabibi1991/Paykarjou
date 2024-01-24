@@ -11,17 +11,14 @@ import request from '@/lib/config';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home({categories}) {
-  
+export default function Home({ categories, audios, movies }) {
   categories && console.log(categories);
   return (
     <main>
       <div className="hidden md:flex">
-        <Slider categories={categories} />
+        <Slider categories={categories} movies={movies} audios={audios} />
       </div>
-      <div className="flex md:hidden">
-     
-      </div>
+      <div className="flex md:hidden"></div>
     </main>
   );
 }
@@ -30,18 +27,26 @@ Home.getLayout = function getLayout(page) {
   return <MainLayout>{page}</MainLayout>;
 };
 
-
-
 export const getServerSideProps = async () => {
-  let categories = []; 
+  let categories = [];
+  let gallery;
   try {
     const response = await request('/page/index');
-    categories = response?.data?.data?.data || []; 
+    categories = response?.data?.data?.data || [];
+    gallery = await request('/gallery/index');
   } catch (error) {
     console.error('API Error:', error);
   }
   return {
-    props: { categories },
+    props: {
+      categories,
+      movies: gallery?.data?.data?.data?.filter(
+        (item) => item.type === 'video'
+      ),
+      audios: gallery?.data?.data?.data?.filter(
+        (item) => item.type === 'podcast'
+      ),
+    },
   };
 };
 
