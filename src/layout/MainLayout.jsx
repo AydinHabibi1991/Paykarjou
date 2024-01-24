@@ -5,7 +5,7 @@ const MainLayout = ({ children }) => {
   const { props } = children;
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary w-full min-h-screen">
       <div className="z-50">
         <Navbar />
       </div>
