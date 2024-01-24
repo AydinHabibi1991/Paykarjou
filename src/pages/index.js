@@ -11,14 +11,21 @@ import request from '@/lib/config';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home({ categories, audios, movies }) {
+export default function Home({ categories, audios, movies, posts }) {
   categories && console.log(categories);
   return (
     <main>
       <div className="hidden md:flex">
         <Slider categories={categories} movies={movies} audios={audios} />
       </div>
-      <div className="flex md:hidden"></div>
+      <div className="flex md:hidden">
+        <MobileLanding
+          categories={categories}
+          posts={posts}
+          movies={movies}
+          audios={audios}
+        />
+      </div>
     </main>
   );
 }
@@ -30,10 +37,12 @@ Home.getLayout = function getLayout(page) {
 export const getServerSideProps = async () => {
   let categories = [];
   let gallery;
+  let posts;
   try {
     const response = await request('/page/index');
     categories = response?.data?.data?.data || [];
     gallery = await request('/gallery/index');
+    posts = await request('/post/index');
   } catch (error) {
     console.error('API Error:', error);
   }
@@ -46,6 +55,7 @@ export const getServerSideProps = async () => {
       audios: gallery?.data?.data?.data?.filter(
         (item) => item.type === 'podcast'
       ),
+      posts: posts?.data?.data?.data,
     },
   };
 };
