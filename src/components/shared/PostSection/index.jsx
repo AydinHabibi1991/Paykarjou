@@ -24,10 +24,7 @@ const PostSection = ({ post }) => {
         </div>
         <div className="relative h-56 sm:h-96 rounded">
           <Image
-            src={
-              UPLOAD_URL + post?.letter_file ||
-              '/assets/images/Rectangle 3906.png'
-            }
+            src={ post?.letter_file}
             layout="fill"
             objectFit="cover"
             alt="Image 2"
