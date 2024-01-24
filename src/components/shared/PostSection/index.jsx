@@ -12,10 +12,7 @@ const PostSection = ({ post }) => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="relative h-56 sm:h-96 rounded">
           <Image
-            src={
-              UPLOAD_URL + post?.cover_file ||
-              '/assets/images/Rectangle 3905.png'
-            }
+            src={ post?.letter_file} 
             layout="fill"
             objectFit="cover"
             alt="Image 1"
@@ -24,10 +21,7 @@ const PostSection = ({ post }) => {
         </div>
         <div className="relative h-56 sm:h-96 rounded">
           <Image
-            src={
-              UPLOAD_URL + post?.letter_file ||
-              '/assets/images/Rectangle 3906.png'
-            }
+            src={ post?.letter_file} 
             layout="fill"
             objectFit="cover"
             alt="Image 2"
