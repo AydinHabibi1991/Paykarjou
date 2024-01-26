@@ -14,6 +14,7 @@ const MobileSlide = ({ post }) => {
             // className="absolute left-0 top-24"
             src={post?.cover_file}
             layout="fill"
+            alt="paykarjoo"
           />
         </div>
         <div className="px-5 pt-20 h-full flex flex-col gap-5 text-txt_primary  mt-8">

@@ -16,17 +16,38 @@ export default function Navbar({ onClose }) {
         className="z-50 border-2 border-[#5E5E67] h-full w-16 fixed top-0 right-0 flex flex-col items-center justify-between px-5 bg-secondary"
       >
         <button onClick={toggleMenu}>
-          <Image src={'/assets/images/menu.svg'} width={20} height={15} />
+          <Image
+            src={'/assets/images/menu.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
         </button>
         <div className="flex flex-col items-center gap-4">
-          <Image src={'/assets/images/instagram.svg'} width={20} height={15} />
-          <Image src={'/assets/images/group.svg'} width={20} height={15} />
+          <Image
+            src={'/assets/images/instagram.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
+          <Image
+            src={'/assets/images/group.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
           <Image
             src={'/assets/images/Auto-added frame.svg'}
             width={20}
             height={15}
+            alt="paykarjoo"
           />
-          <Image src={'/assets/images/whatsapp.svg'} width={20} height={15} />
+          <Image
+            src={'/assets/images/whatsapp.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
         </div>
       </div>
     );
@@ -62,14 +83,30 @@ export default function Navbar({ onClose }) {
           </li>
         </ul>
         <div className="flex items-center gap-4 ml-52">
-          <Image src={'/assets/images/instagram.svg'} width={20} height={15} />
-          <Image src={'/assets/images/group.svg'} width={20} height={15} />
+          <Image
+            src={'/assets/images/instagram.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
+          <Image
+            src={'/assets/images/group.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
           <Image
             src={'/assets/images/Auto-added frame.svg'}
             width={20}
             height={15}
+            alt="paykarjoo"
           />
-          <Image src={'/assets/images/whatsapp.svg'} width={20} height={15} />
+          <Image
+            src={'/assets/images/whatsapp.svg'}
+            width={20}
+            height={15}
+            alt="paykarjoo"
+          />
         </div>
       </div>
     </div>

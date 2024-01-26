@@ -58,6 +58,7 @@ const FirstSlide = ({categories, handleNext, handlePrev }) => {
               src={'/assets/images/paykarjoo.png'}
               width={400}
               height={300}
+              alt="paykarjoo"
             />
             <h2 className="text-secondary text-center text-xl">
               عضو هیات علمی دانشگاه
@@ -73,21 +74,25 @@ const FirstSlide = ({categories, handleNext, handlePrev }) => {
                 src={'/assets/images/instagram1.svg'}
                 width={20}
                 height={15}
+                alt="paykarjoo"
               />
               <Image
                 src={'/assets/images/Youtube1.svg'}
                 width={20}
                 height={15}
+                alt="paykarjoo"
               />
               <Image
                 src={'/assets/images/telegram1.svg'}
                 width={20}
                 height={15}
+                alt="paykarjoo"
               />
               <Image
                 src={'/assets/images/whatsapp1.svg'}
                 width={20}
                 height={15}
+                alt="paykarjoo"
               />
             </div>
           </div>

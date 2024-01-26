@@ -127,6 +127,7 @@ function SinglePodcast({ audio, audios }) {
     return () => {
       ws.destroy();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

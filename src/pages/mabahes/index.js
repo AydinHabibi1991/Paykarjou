@@ -1,10 +1,5 @@
 import React from 'react'
-import AsreDigital from '../../components/Subject/AsrDigital';
-import GhaireEghtesad from '../../components/Subject/GhaireEghtesad';
-import Iran from '../../components/Subject/Iran';
-import Modern from '../../components/Subject/Modern';
-import EghtesadNapazir from '../../components/Subject/EghtesadNapazir';
-import AyandePajuhi from '../../components/Subject/AyandePajuhi';
+import MainLayout from '@/layout/MainLayout';
 import PostSection from '@/components/shared/PostSection';
 import request from './../../lib/config';
 
