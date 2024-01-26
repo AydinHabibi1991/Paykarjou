@@ -1,9 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Button from '../shared/Button/index';
 import { useRouter } from 'next/router';
-import { UPLOAD_URL } from '@/lib/config';
 
 const MobileSlide = ({ post }) => {
   const router = useRouter();

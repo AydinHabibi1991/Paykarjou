@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { articles } from '../slides/FirstSlide';
 import Button from './../shared/Button/index';
 import MobileSlide from '../slides/MobileSlide';
 import MovieCard from '../shared/MovieCard';
