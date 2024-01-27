@@ -7,7 +7,6 @@ import AudioCard from '../shared/AudioCard';
 import { useRouter } from 'next/router';
 
 function MobileLanding({ categories, posts, audios, movies }) {
-  console.log(posts);
   const router = useRouter();
   return (
     <div className="w-full text-txt_primary flex flex-col gap-7 justify-start items-center">
