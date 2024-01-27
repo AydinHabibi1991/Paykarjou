@@ -198,7 +198,6 @@ export const getServerSideProps = async () => {
   } catch (error) {
     console.log(JSON.stringify(error, null, 2));
   }
-  console.log(aboutUs?.data?.data);
   return {
     props: {
       aboutUs: aboutUs?.data?.data,

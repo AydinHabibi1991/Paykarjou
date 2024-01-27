@@ -12,7 +12,6 @@ import request from '@/lib/config';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ categories, audios, movies, posts }) {
-  categories && console.log(categories);
   return (
     <main>
       <div className="hidden md:flex">

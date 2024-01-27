@@ -36,7 +36,6 @@ export const getServerSideProps = async () => {
   } catch (error) {
     console.log(JSON.stringify(error, null, 2));
   }
-  console.log(gallery?.data?.data);
   return {
     props: {
       podcasts: gallery?.data?.data?.data?.filter(

@@ -130,8 +130,6 @@ export default function Slider({ categories, audios, movies }) {
           />
         </SwiperSlide>
         {categories.map((slide) => {
-          console.log(slide.short_description);
-
           return (
             <SwiperSlide key={slide.title}>
               <Slides

@@ -55,8 +55,6 @@ const movies = [
 function SingleFilm({ films, film }) {
   const [movie, setMovie] = React.useState(film);
 
-  console.log(movie);
-
   return (
     <div className="bg-secondary flex items-start justify-center h-full pb-6 text-txt_primary pt-16">
       <div className="w-[85%] h-full flex flex-col items-start justify-start gap-4 z-40">
@@ -109,7 +107,6 @@ export const getServerSideProps = async ({ params }) => {
   } catch (error) {
     console.log(JSON.stringify(error, null, 2));
   }
-  console.log(item);
   return {
     props: {
       films:

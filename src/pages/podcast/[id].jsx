@@ -90,7 +90,6 @@ const audios = [
 
 function SinglePodcast({ audio, audios }) {
 
-  console.log(audio);
   // audio = audios[0];
   const waveformRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -228,7 +227,6 @@ export const getServerSideProps = async ({ params }) => {
   } catch (error) {
     console.log(JSON.stringify(error, null, 2));
   }
-  console.log("hear",item);
   return {
     props: {
       audios: gallery?.data?.data?.data?.filter(
