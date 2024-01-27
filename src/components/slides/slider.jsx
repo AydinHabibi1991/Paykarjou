@@ -120,7 +120,7 @@ export default function Slider({ categories, audios, movies }) {
         // navigation={true}
         allowTouchMove={false}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper !w-screen"
       >
         <SwiperSlide>
           <FirstSlide
