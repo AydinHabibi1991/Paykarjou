@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import MovieCard from '@/components/shared/MovieCard';
 import ReactPlayer from 'react-player/lazy';
 import request from '../../lib/config';
+import MainLayout from '@/layout/MainLayout';
 
 const movies = [
   {

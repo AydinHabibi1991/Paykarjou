@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { articles } from '../slides/FirstSlide';
 import Button from './../shared/Button/index';
 import MobileSlide from '../slides/MobileSlide';
 import MovieCard from '../shared/MovieCard';
@@ -19,6 +18,7 @@ function MobileLanding({ categories, posts, audios, movies }) {
             src={'/assets/images/paykarjoo.png'}
             width={400}
             height={300}
+            alt="paykarjoo"
           />
           <h2 className="text-secondary text-center text-xl">
             عضو هیات علمی دانشگاه

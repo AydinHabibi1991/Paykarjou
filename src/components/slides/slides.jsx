@@ -49,6 +49,7 @@ const Slides = ({ img, title, desc, handleNext, handlePrev, categories }) => {
             src={img}
             width={600}
             height={500}
+            alt="paykarjoo"
           />
         </div>
       </div>

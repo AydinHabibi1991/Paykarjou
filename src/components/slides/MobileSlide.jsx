@@ -1,9 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Button from '../shared/Button/index';
 import { useRouter } from 'next/router';
-import { UPLOAD_URL } from '@/lib/config';
 
 const MobileSlide = ({ post }) => {
   const router = useRouter();
@@ -16,6 +14,7 @@ const MobileSlide = ({ post }) => {
             // className="absolute left-0 top-24"
             src={post?.cover_file}
             layout="fill"
+            alt="paykarjoo"
           />
         </div>
         <div className="px-5 pt-20 h-full flex flex-col gap-5 text-txt_primary  mt-8">

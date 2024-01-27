@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61c97e2-9e80-49aa-9fc8-51be4f8754db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/shared/MovieCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MovieCard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileLanding/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileLanding/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Button/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slides/FirstSlide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/FirstSlide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slides/MobileSlide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/MobileSlide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slides/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slides/slides.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/slides.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/film/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/film/[id].jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/film/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/film/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mabahes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mabahes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/podcast/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/podcast/[id].jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/podcast/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/podcast/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/AudioProgress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AudioProgress.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +55,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706358660328</updated>
-      <workItem from="1706358662432" duration="2576000" />
+      <workItem from="1706358662432" duration="3029000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/film/index.js</url>
-          <line>4</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 // import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
-import Gallery from '@/pages/gallery';
 import Movies from './Movies';
 import Audios from './Audios';
 

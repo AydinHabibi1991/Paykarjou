@@ -1,6 +1,7 @@
 import AudioCard from '@/components/shared/AudioCard'
 import React from 'react'
 import request from './../../lib/config';
+import MainLayout from '@/layout/MainLayout';
 
 
 function Podcast({ podcasts }) {
