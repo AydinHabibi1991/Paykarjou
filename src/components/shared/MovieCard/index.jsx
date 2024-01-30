@@ -30,23 +30,23 @@ const MovieCard = ({ movie, width = 350, height = 370 }) => {
               <path
                 d="M7.63497 2.99634V5.99759"
                 stroke="#031828"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M16.6389 2.99634V5.99759"
                 stroke="#031828"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M3.13281 9.49899H21.1403"
                 stroke="#031828"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <rect
                 x="3.13281"
@@ -55,9 +55,9 @@ const MovieCard = ({ movie, width = 350, height = 370 }) => {
                 height="16.5069"
                 rx="3"
                 stroke="#031828"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
@@ -74,10 +74,10 @@ const MovieCard = ({ movie, width = 350, height = 370 }) => {
             <path
               d="M4 12V8.44002C4 4.02002 7.13 2.21002 10.96 4.42002L14.05 6.20002L17.14 7.98002C20.97 10.19 20.97 13.81 17.14 16.02L14.05 17.8L10.96 19.58C7.13 21.79 4 19.98 4 15.56V12Z"
               stroke="#4B4B4A"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               strokeMiterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>
