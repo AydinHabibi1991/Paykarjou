@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from '@/components/shared/MovieCard';
 import request from '../../lib/config';
-
+import MainLayout from "@/layout/MainLayout";
 const movies = [
   {
     src: '/assets/images/videocover.png',
