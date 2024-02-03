@@ -10,7 +10,7 @@ const Button = (props) => {
           )
         : props.icon}
 
-      {props.title && <snan>{props.title}</snan>}
+      {props.title && <span>{props.title}</span>}
     </button>
   );
 };
