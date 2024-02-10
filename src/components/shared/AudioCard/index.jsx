@@ -13,7 +13,7 @@ const AudioCard = ({ audio, width = 350, height = 200 }) => {
   return (
     <div
       onClick={() => router.push(`/podcast/${audio.id}`)}
-      className={`min-w-[400px] max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between cursor-pointer`}
+      className={`min-w-[350px] max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between cursor-pointer`}
     >
       <div className="w-full space-y-2 flex flex-col justify-between">
         <div className="overflow-hidden rounded-md h-20 relative">

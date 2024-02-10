@@ -3,20 +3,21 @@ import Image from 'next/image';
 import { CiPlay1 } from 'react-icons/ci';
 import { useRouter } from 'next/router';
 
-const MovieCard = ({ movie, width = 350, height = 370 }) => {
+const MovieCard = ({ movie, width = 450, height = 370 }) => {
   const router = useRouter();
   return (
     <div
-      className="overflow-hidden max-w-xs basis-52 flex flex-col gap-3 text-txt_primary cursor-pointer"
+      className="overflow-hidden min-w-[350px] flex flex-col gap-3 text-txt_primary cursor-pointer"
       onClick={() => router.push(`/film/${movie.id}`)}
     >
-      <div className="relative rounded-md max-w-xs basis-52 overflow-hidden">
-        <Image
-          src={movie?.cover || '/assets/images/videocover.png'}
-          width={width}
-          height={height}
-          alt={movie?.title}
-        />
+      <div className="relative w-full space-y-2 flex flex-col justify-between">
+        <div className="overflow-hidden rounded-md h-52 relative">
+          <Image
+            src={movie?.cover || '/assets/images/videocover.png'}
+            layout="fill"
+            alt={movie?.title}
+          />
+        </div>
 
         <div className="text-primary absolute top-5 left-5 flex items-center gap-1 p-2 justify-between bg-secondary rounded-xl bg-opacity-90">
           <div>
