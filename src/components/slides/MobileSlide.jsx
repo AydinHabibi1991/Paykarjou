@@ -9,10 +9,10 @@ const MobileSlide = ({ post }) => {
     <div className="bg-secondary w-full flex items-center justify-center relative">
       <div className="w-full h-full flex flex-col items-start justify-start gap-5">
         <div className="self-end w-full bg-primary h-32 absolute z-0" />
-        <div className="w-[80%] h-96 self-center relative overflow-hidden top-10 flex items-center justify-center z-10 ">
+        <div className="w-[80%] h-96 self-center relative overflow-hidden top-5 flex items-center justify-center z-10 ">
           <Image
             // className="absolute left-0 top-24"
-            src={post?.cover_file}
+            src={post?.icon}
             layout="fill"
             alt="paykarjoo"
           />
@@ -22,10 +22,10 @@ const MobileSlide = ({ post }) => {
             <h3 className="text-xl">اقتصاد به زبان ساده</h3>
           </div>
           <div className="flex items-end gap-3 w-full">
-            <h1 className="text-4xl font-bold">{post?.title}</h1>
+            <h1 className="text-4xl font-bold">{post?.label}</h1>
           </div>
           <div className="flex items-center flex-wrap gap-5 text-primary">
-            <p>{post?.desc}</p>
+            <p>{post?.short_description}</p>
             <Button
               onClick={() => router.push('/mabahes')}
               title={'مشاهده بیشتر'}

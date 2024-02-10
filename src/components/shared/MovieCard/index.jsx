@@ -61,7 +61,13 @@ const MovieCard = ({ movie, width = 350, height = 370 }) => {
               />
             </svg>
           </div>
-          <div>date</div>
+          <div>
+            {new Date(movie.created_at).toLocaleDateString('fa-ir', {
+              month: 'long',
+              year: 'numeric',
+              day: 'numeric',
+            })}
+          </div>
         </div>
         <div className="text-primary absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-3 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center">
           <svg

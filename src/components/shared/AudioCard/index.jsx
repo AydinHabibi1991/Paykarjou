@@ -6,29 +6,36 @@ import Button from '../Button';
 import AudioProgress from '@/utils/AudioProgress';
 import { useRouter } from 'next/router';
 
-const AudioCard = ({ audio, width = 350, height = 370 }) => {
+const AudioCard = ({ audio, width = 350, height = 200 }) => {
   // const [isPlaying, setIsPlaying] = useState(false);
   const router = useRouter();
 
   return (
     <div
       onClick={() => router.push(`/podcast/${audio.id}`)}
-      className={`max-w-sm max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between cursor-pointer`}
+      className={`min-w-[400px] max-h-56 p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between cursor-pointer`}
     >
-      <div className="max-w-sm basis-52 overflow-hidden relative rounded-sm space-y-2">
-        <Image
-          src={audio?.cover || '/assets/images/image8.png'}
-          alt="alt"
-          width={width}
-          height={height}
-          //   style={{ width: '100%', height: '100%' }}
-        />
-        <div className="flex items-start flex-col gap-2">
+      <div className="w-full space-y-2 flex flex-col justify-between">
+        <div className="overflow-hidden rounded-md h-20 relative">
+          <Image
+            src={audio?.cover || '/assets/images/image8.png'}
+            alt="alt"
+            layout="fill"
+            //   style={{ width: '100%', height: '100%' }}
+          />
+        </div>
+        <div className="flex items-start justify-between flex-col gap-2">
           <div className="text-primary"> {audio?.title}</div>
           <div className="text-primary w-full flex items-center justify-between ">
             <div className="flex items-center gap-1">
               <BsClock size={24} />
-              <span>{audio?.duration}</span>
+              <span>
+                {new Date(audio.created_at).toLocaleDateString('fa-ir', {
+                  month: 'long',
+                  year: 'numeric',
+                  day: 'numeric',
+                })}
+              </span>
             </div>
             <div className="flex items-center gap-1">
               <div>
