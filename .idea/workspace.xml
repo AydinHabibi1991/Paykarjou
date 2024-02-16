@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61c97e2-9e80-49aa-9fc8-51be4f8754db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MobileLanding/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileLanding/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Button/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slides/FirstSlide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/FirstSlide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slides/MobileSlide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/MobileSlide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slides/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slides/slides.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slides/slides.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/film/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/film/[id].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/film/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/film/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/mabahes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mabahes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/podcast/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/podcast/[id].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/podcast/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/podcast/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project/backoffice" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -55,7 +39,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706358660328</updated>
-      <workItem from="1706358662432" duration="3029000" />
+      <workItem from="1706358662432" duration="3078000" />
+      <workItem from="1706362592907" duration="59000" />
+      <workItem from="1706972649916" duration="126000" />
+      <workItem from="1706974127120" duration="2593000" />
+      <workItem from="1707567060129" duration="2003000" />
+      <workItem from="1707721066661" duration="105000" />
     </task>
     <servers />
   </component>
