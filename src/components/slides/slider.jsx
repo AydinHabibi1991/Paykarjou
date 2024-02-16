@@ -103,6 +103,10 @@ export default function Slider({ categories, audios, movies }) {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+  const handleSwitch = useCallback((index) => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideTo(index);
+  }, []);
 
   return (
     <>
@@ -114,10 +118,6 @@ export default function Slider({ categories, audios, movies }) {
         }}
         speed={600}
         parallax={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // navigation={true}
         allowTouchMove={false}
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper !w-screen"
@@ -127,6 +127,7 @@ export default function Slider({ categories, audios, movies }) {
             categories={categories}
             handleNext={handleNext}
             handlePrev={handlePrev}
+            handleSwitch={handleSwitch}
           />
         </SwiperSlide>
         {categories.map((slide) => {
@@ -134,7 +135,7 @@ export default function Slider({ categories, audios, movies }) {
             <SwiperSlide key={slide.title}>
               <Slides
                 categories={categories}
-                img={slide.img}
+                img={slide.icon}
                 title={slide.label}
                 desc={slide.short_description}
                 handleNext={handleNext}

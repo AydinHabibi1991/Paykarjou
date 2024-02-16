@@ -7,7 +7,7 @@ import Button from './../shared/Button/index';
   
 
 
-const FirstSlide = ({categories, handleNext, handlePrev }) => {
+const FirstSlide = ({ categories, handleNext, handlePrev, handleSwitch }) => {
   return (
     <div className="bg-secondary flex items-start justify-center h-screen">
       <div className="w-[85%] h-full flex items-start justify-start gap-5">
@@ -29,11 +29,12 @@ const FirstSlide = ({categories, handleNext, handlePrev }) => {
             <h3 className="font-semibold text-xl">خوشبختم از آشنایی شما</h3>
           </div>
           <div className="flex items-center flex-wrap gap-5">
-            {categories.map((article) => (
+            {categories.map((article, index) => (
               <Button
                 key={article?.id}
                 title={article?.label}
                 icon={article?.icon}
+                onClick={() => handleSwitch(index + 1)}
                 isCategory
                 className="flex items-center justify-start pr-4 flex-grow basis-60 gap-3 p-2 border border-primary rounded-full hover:text-secondary hover:bg-primary"
               />

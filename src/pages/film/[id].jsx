@@ -58,15 +58,20 @@ function SingleFilm({ films, film }) {
   return (
     <div className="bg-secondary flex items-start justify-center h-full pb-6 text-txt_primary pt-16">
       <div className="w-[85%] h-full flex flex-col items-start justify-start gap-4 z-40">
-        <div className="w-full flex items-center justify-between gap-4">
+        <div className="w-full flex items-center justify-center gap-4">
           <div className="flex flex-col items-start gap-2 ">
             <span>فیلم</span>
             <h1 className="text-2xl font-semibold">{movie?.title}</h1>
             <div className="flex flex-col gap-3 text-txt_primary">
-              <div className="relative rounded-md overflow-hidden">
-                <div className="w-full">
+              <div className="w-full flex items-center justify-center relative rounded-md overflow-hidden">
+                <div className="w-full flex items-center justify-center">
                   {/* Lazy load the YouTube player */}
-                  <ReactPlayer controls url={movie?.url} height={400} />
+                  <ReactPlayer
+                    controls
+                    url={movie?.url}
+                    width={'100%'}
+                    height={400}
+                  />
                 </div>
               </div>
               <div>

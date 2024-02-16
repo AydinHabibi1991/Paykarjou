@@ -140,13 +140,15 @@ function SinglePodcast({ audio, audios }) {
           <div
             className={`w-full p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between`}
           >
-            <div className="w-full h-80 overflow-hidden relative rounded-sm space-y-2">
-              <Image
-                src={audio?.cover || ''}
-                alt="alt"
-                layout='fill'
-                //   style={{ width: '100%', height: '100%' }}
-              />
+            <div className="w-full space-y-2">
+              <div className="overflow-hidden rounded-md h-64 relative">
+                <Image
+                  src={audio?.cover || ''}
+                  alt="alt"
+                  layout="fill"
+                  //   style={{ width: '100%', height: '100%' }}
+                />
+              </div>
               <div className="flex items-start flex-col gap-2">
                 <div className="text-primary"> {audio?.title}</div>
                 <div className="text-primary w-full flex items-center justify-between ">

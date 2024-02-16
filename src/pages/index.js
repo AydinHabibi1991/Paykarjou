@@ -1,19 +1,14 @@
 import { Inter } from 'next/font/google';
 import MainLayout from '@/layout/MainLayout';
 import Slider from '@/components/slides/slider';
-import MovieCard from '@/components/shared/MovieCard';
-import movie from '../../public/assets/images/paykarjoo.png';
-import AudioCard from '@/components/shared/AudioCard';
-import Movies from '@/components/slides/Movies';
 import MobileLanding from '@/components/MobileLanding';
 import request from '@/lib/config';
-
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ categories, audios, movies, posts }) {
   return (
-    <main>
+    <main className="bg-secondary min-w-screen min-h-screen">
       <div className="hidden md:flex">
         <Slider categories={categories} movies={movies} audios={audios} />
       </div>

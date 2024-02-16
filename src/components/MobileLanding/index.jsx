@@ -56,9 +56,9 @@ function MobileLanding({ categories, posts, audios, movies }) {
       </div>
       {/* articles */}
       <div className="w-full flex flex-col items-center gap-5 mt-5">
-        {posts.map(
-          (post, index) =>
-            index < 6 && <MobileSlide key={post?.id} post={post} />
+        {categories.map(
+          (category, index) =>
+            index < 6 && <MobileSlide key={category?.id} post={category} />
         )}
       </div>
       {/* movies */}

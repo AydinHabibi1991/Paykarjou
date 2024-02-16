@@ -5,6 +5,7 @@ import Button from '../shared/Button/index';
 import { useRouter } from 'next/router';
 
 const Slides = ({ img, title, desc, handleNext, handlePrev, categories }) => {
+  console.log(img);
   const router = useRouter();
   return (
     <div className="bg-secondary flex items-start justify-center h-screen">
