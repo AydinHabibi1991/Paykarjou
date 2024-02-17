@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 
-export default function Navbar({ onClose }) {
+export default function Navbar({ onClose, social }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleMenu = () => {
@@ -23,31 +23,39 @@ export default function Navbar({ onClose }) {
             alt="paykarjoo"
           />
         </button>
-        <div className="flex flex-col items-center gap-4">
-          <Image
-            src={'/assets/images/instagram.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/group.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/Auto-added frame.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/whatsapp.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
+        <div className="flex flex-row items-center gap-4">
+          <Link href={social.find((s) => s.key.includes('instagram')).content}>
+            <Image
+              src={'/assets/images/instagram.svg'}
+              width={20}
+              height={15}
+              alt="instagram"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('ita')).content}>
+            <Image
+              src={'/assets/images/group.svg'}
+              width={20}
+              height={15}
+              alt="ita"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('telegram')).content}>
+            <Image
+              src={'/assets/images/Auto-added frame.svg'}
+              width={20}
+              height={15}
+              alt="telegram"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+            <Image
+              src={'/assets/images/whatsapp.svg'}
+              width={20}
+              height={15}
+              alt="whatsapp"
+            />
+          </Link>
         </div>
       </div>
     );
@@ -82,31 +90,40 @@ export default function Navbar({ onClose }) {
             <Link href="/">صفحه نخست </Link>
           </li>
         </ul>
-        <div className="flex items-center gap-4 ml-52">
-          <Image
-            src={'/assets/images/instagram.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/group.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/Auto-added frame.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
-          <Image
-            src={'/assets/images/whatsapp.svg'}
-            width={20}
-            height={15}
-            alt="paykarjoo"
-          />
+
+        <div className="flex flex-row items-center gap-4">
+          <Link href={social.find((s) => s.key.includes('instagram')).content}>
+            <Image
+              src={'/assets/images/instagram.svg'}
+              width={20}
+              height={15}
+              alt="instagram"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('ita')).content}>
+            <Image
+              src={'/assets/images/group.svg'}
+              width={20}
+              height={15}
+              alt="ita"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('telegram')).content}>
+            <Image
+              src={'/assets/images/Auto-added frame.svg'}
+              width={20}
+              height={15}
+              alt="telegram"
+            />
+          </Link>
+          <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+            <Image
+              src={'/assets/images/whatsapp.svg'}
+              width={20}
+              height={15}
+              alt="whatsapp"
+            />
+          </Link>
         </div>
       </div>
     </div>

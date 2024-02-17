@@ -91,7 +91,7 @@ export const audios = [
   },
 ];
 
-export default function Slider({ categories, audios, movies }) {
+export default function Slider({ categories, audios, movies, social }) {
   const sliderRef = useRef(null);
 
   const handlePrev = useCallback(() => {
@@ -128,6 +128,7 @@ export default function Slider({ categories, audios, movies }) {
             handleNext={handleNext}
             handlePrev={handlePrev}
             handleSwitch={handleSwitch}
+            social={social}
           />
         </SwiperSlide>
         {categories.map((slide) => {

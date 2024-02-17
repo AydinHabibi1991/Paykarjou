@@ -2,12 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Button from './../shared/Button/index';
+import Link from 'next/link';
 
-
-  
-
-
-const FirstSlide = ({ categories, handleNext, handlePrev, handleSwitch }) => {
+const FirstSlide = ({
+  categories,
+  handleNext,
+  handlePrev,
+  handleSwitch,
+  social,
+}) => {
   return (
     <div className="bg-secondary flex items-start justify-center h-screen">
       <div className="w-[85%] h-full flex items-start justify-start gap-5">
@@ -71,30 +74,44 @@ const FirstSlide = ({ categories, handleNext, handlePrev, handleSwitch }) => {
           <div className="flex items-center justify-start gap-3 flex-col">
             <span className="text-secondary text-center">ارتباط با ما</span>
             <div className="flex flex-row-reverse items-center gap-4 text-gray-700">
-              <Image
-                src={'/assets/images/instagram1.svg'}
-                width={20}
-                height={15}
-                alt="paykarjoo"
-              />
-              <Image
-                src={'/assets/images/Youtube1.svg'}
-                width={20}
-                height={15}
-                alt="paykarjoo"
-              />
-              <Image
-                src={'/assets/images/telegram1.svg'}
-                width={20}
-                height={15}
-                alt="paykarjoo"
-              />
-              <Image
-                src={'/assets/images/whatsapp1.svg'}
-                width={20}
-                height={15}
-                alt="paykarjoo"
-              />
+              <Link
+                href={social.find((s) => s.key.includes('instagram')).content}
+              >
+                <Image
+                  src={'/assets/images/instagram1.svg'}
+                  width={20}
+                  height={15}
+                  alt="instagram"
+                />
+              </Link>
+              <Link href={social.find((s) => s.key.includes('ita')).content}>
+                <Image
+                  src={'/assets/images/Youtube1.svg'}
+                  width={20}
+                  height={15}
+                  alt="ita"
+                />
+              </Link>
+              <Link
+                href={social.find((s) => s.key.includes('telegram')).content}
+              >
+                <Image
+                  src={'/assets/images/telegram1.svg'}
+                  width={20}
+                  height={15}
+                  alt="telegram"
+                />
+              </Link>
+              <Link
+                href={social.find((s) => s.key.includes('whatsapp')).content}
+              >
+                <Image
+                  src={'/assets/images/whatsapp1.svg'}
+                  width={20}
+                  height={15}
+                  alt="whatsapp"
+                />
+              </Link>
             </div>
           </div>
         </div>

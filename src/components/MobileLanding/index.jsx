@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Button from './../shared/Button/index';
 import MobileSlide from '../slides/MobileSlide';
 import MovieCard from '../shared/MovieCard';
 import AudioCard from '../shared/AudioCard';
 import { useRouter } from 'next/router';
 
-function MobileLanding({ categories, posts, audios, movies }) {
+function MobileLanding({ categories, posts, audios, movies, social }) {
   const router = useRouter();
   return (
     <div className="w-full text-txt_primary flex flex-col gap-7 justify-start items-center">
@@ -25,6 +26,45 @@ function MobileLanding({ categories, posts, audios, movies }) {
           <h2 className="text-secondary text-center text-xl">
             اقتصاد دان وتحلیل گر اقتصادی
           </h2>
+        </div>
+        <div className="flex items-center justify-start gap-3 flex-col mt-3">
+          <span className="text-secondary text-center">ارتباط با ما</span>
+          <div className="flex flex-row-reverse items-center gap-4 text-gray-700">
+            <Link
+              href={social.find((s) => s.key.includes('instagram')).content}
+            >
+              <Image
+                src={'/assets/images/instagram1.svg'}
+                width={20}
+                height={15}
+                alt="instagram"
+              />
+            </Link>
+            <Link href={social.find((s) => s.key.includes('ita')).content}>
+              <Image
+                src={'/assets/images/Youtube1.svg'}
+                width={20}
+                height={15}
+                alt="ita"
+              />
+            </Link>
+            <Link href={social.find((s) => s.key.includes('telegram')).content}>
+              <Image
+                src={'/assets/images/telegram1.svg'}
+                width={20}
+                height={15}
+                alt="telegram"
+              />
+            </Link>
+            <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+              <Image
+                src={'/assets/images/whatsapp1.svg'}
+                width={20}
+                height={15}
+                alt="whatsapp"
+              />
+            </Link>
+          </div>
         </div>
       </div>
       {/* first style content */}

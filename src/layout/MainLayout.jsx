@@ -7,7 +7,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className="bg-secondary w-full min-h-screen">
       <div className="z-50">
-        <Navbar />
+        <Navbar social={props.social} />
       </div>
       <div>{children}</div>
     </div>
