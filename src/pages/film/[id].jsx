@@ -62,6 +62,26 @@ function SingleFilm({ films, film }) {
           <div className="flex flex-col items-start gap-2 ">
             <span>فیلم</span>
             <h1 className="text-2xl font-semibold">{movie?.title}</h1>
+            <div className="w-full flex items-center justify-start gap-3 text-gray-500 mt-3 text-xs">
+              <div>
+                <span>تاریخ : </span>
+                <span>
+                  {new Date(movie?.updated_at).toLocaleDateString('fa-ir', {
+                    month: 'long',
+                    year: 'numeric',
+                    day: 'numeric',
+                  })}
+                </span>
+              </div>
+              <div className="flex gap-2">
+                <span>برچسب ها : </span>
+                <div className="flex items-center gap-3 justify-center flex-wrap divide-x">
+                  {movie?.tags.map((tag) => (
+                    <span key={tag.name}>{tag.label}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div className="flex flex-col gap-3 text-txt_primary">
               <div className="w-full flex items-center justify-center relative rounded-md overflow-hidden">
                 <div className="w-full flex items-center justify-center">

@@ -12,7 +12,7 @@ const PostSection = ({ post }) => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="relative h-56 sm:h-96 rounded">
           <Image
-            src={ post?.letter_file} 
+            src={post?.letter_file}
             layout="fill"
             objectFit="cover"
             alt="Image 1"
@@ -21,7 +21,7 @@ const PostSection = ({ post }) => {
         </div>
         <div className="relative h-56 sm:h-96 rounded">
           <Image
-            src={ post?.letter_file} 
+            src={post?.letter_file}
             layout="fill"
             objectFit="cover"
             alt="Image 2"
@@ -46,6 +46,27 @@ const PostSection = ({ post }) => {
               alt="Image 4"
               className="rounded"
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex items-center justify-start gap-3 text-gray-500 mt-3 text-xs">
+        <div>
+          <span>تاریخ : </span>
+          <span>
+            {new Date(post?.updated_at).toLocaleDateString('fa-ir', {
+              month: 'long',
+              year: 'numeric',
+              day: 'numeric',
+            })}
+          </span>
+        </div>
+        <div className="flex gap-2">
+          <span>برچسب ها : </span>
+          <div className="flex items-center gap-3 justify-center flex-wrap divide-x">
+            {post?.tags.map((tag) => (
+              <span key={tag.name}>{tag.label}</span>
+            ))}
           </div>
         </div>
       </div>
