@@ -32,7 +32,7 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
           <div className="flex flex-row-reverse items-center gap-4 text-gray-700">
             <Link
               href={
-                social.find((s) => s.key.includes('instagram'))?.content ?? ''
+                social?.find((s) => s.key.includes('instagram'))?.content ?? ''
               }
             >
               <Image
@@ -43,7 +43,7 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
               />
             </Link>
             <Link
-              href={social.find((s) => s.key.includes('ita'))?.content ?? ''}
+              href={social?.find((s) => s.key.includes('ita'))?.content ?? ''}
             >
               <Image
                 src={'/assets/images/Youtube1.svg'}
@@ -54,7 +54,7 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
             </Link>
             <Link
               href={
-                social.find((s) => s.key.includes('telegram'))?.content ?? ''
+                social?.find((s) => s.key.includes('telegram'))?.content ?? ''
               }
             >
               <Image
@@ -66,7 +66,7 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
             </Link>
             <Link
               href={
-                social.find((s) => s.key.includes('whatsapp'))?.content ?? ''
+                social?.find((s) => s.key.includes('whatsapp'))?.content ?? ''
               }
             >
               <Image

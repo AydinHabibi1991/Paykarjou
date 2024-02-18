@@ -26,7 +26,7 @@ export default function Navbar({ onClose, social }) {
         <div className="flex flex-row items-center gap-4">
           <Link
             href={
-              social.find((s) => s.key.includes('instagram'))?.content ?? ''
+              social?.find((s) => s.key.includes('instagram'))?.content ?? ''
             }
           >
             <Image
@@ -36,7 +36,9 @@ export default function Navbar({ onClose, social }) {
               alt="instagram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('ita'))?.content ?? ''}>
+          <Link
+            href={social?.find((s) => s.key.includes('ita'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/group.svg'}
               width={20}
@@ -45,7 +47,9 @@ export default function Navbar({ onClose, social }) {
             />
           </Link>
           <Link
-            href={social.find((s) => s.key.includes('telegram'))?.content ?? ''}
+            href={
+              social?.find((s) => s.key.includes('telegram'))?.content ?? ''
+            }
           >
             <Image
               src={'/assets/images/Auto-added frame.svg'}
@@ -55,7 +59,9 @@ export default function Navbar({ onClose, social }) {
             />
           </Link>
           <Link
-            href={social.find((s) => s.key.includes('whatsapp'))?.content ?? ''}
+            href={
+              social?.find((s) => s.key.includes('whatsapp'))?.content ?? ''
+            }
           >
             <Image
               src={'/assets/images/whatsapp.svg'}
@@ -102,7 +108,7 @@ export default function Navbar({ onClose, social }) {
         <div className="flex flex-row items-center gap-4">
           <Link
             href={
-              social.find((s) => s.key.includes('instagram'))?.content ?? ''
+              social?.find((s) => s.key.includes('instagram'))?.content ?? ''
             }
           >
             <Image
@@ -112,7 +118,9 @@ export default function Navbar({ onClose, social }) {
               alt="instagram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('ita'))?.content ?? ''}>
+          <Link
+            href={social?.find((s) => s.key.includes('ita'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/group.svg'}
               width={20}
@@ -121,7 +129,9 @@ export default function Navbar({ onClose, social }) {
             />
           </Link>
           <Link
-            href={social.find((s) => s.key.includes('telegram'))?.content ?? ''}
+            href={
+              social?.find((s) => s.key.includes('telegram'))?.content ?? ''
+            }
           >
             <Image
               src={'/assets/images/Auto-added frame.svg'}
@@ -131,7 +141,9 @@ export default function Navbar({ onClose, social }) {
             />
           </Link>
           <Link
-            href={social.find((s) => s.key.includes('whatsapp'))?.content ?? ''}
+            href={
+              social?.find((s) => s.key.includes('whatsapp'))?.content ?? ''
+            }
           >
             <Image
               src={'/assets/images/whatsapp.svg'}

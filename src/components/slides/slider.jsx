@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
 import Movies from './Movies';
 import Audios from './Audios';
+import { AppContext } from '@/context/AppContext';
 
 // export const slides = [
 //   {
@@ -93,19 +94,27 @@ export const audios = [
 
 export default function Slider({ categories, audios, movies, social }) {
   const sliderRef = useRef(null);
+  const { currentSlide, handleChangeSlide } = React.useContext(AppContext);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
+    handleChangeSlide(currentSlide - 1);
   }, []);
 
   const handleNext = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
+    handleChangeSlide(currentSlide + 1);
   }, []);
   const handleSwitch = useCallback((index) => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideTo(index);
+    handleChangeSlide(index);
+  }, []);
+
+  React.useEffect(() => {
+    sliderRef.current.swiper.slideTo(currentSlide);
   }, []);
 
   return (

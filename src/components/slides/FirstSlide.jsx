@@ -76,7 +76,8 @@ const FirstSlide = ({
             <div className="flex flex-row-reverse items-center gap-4 text-gray-700">
               <Link
                 href={
-                  social.find((s) => s.key.includes('instagram'))?.content ?? ''
+                  social?.find((s) => s.key.includes('instagram'))?.content ??
+                  ''
                 }
               >
                 <Image
@@ -87,7 +88,7 @@ const FirstSlide = ({
                 />
               </Link>
               <Link
-                href={social.find((s) => s.key.includes('ita'))?.content ?? ''}
+                href={social?.find((s) => s.key.includes('ita'))?.content ?? ''}
               >
                 <Image
                   src={'/assets/images/Youtube1.svg'}
@@ -98,7 +99,7 @@ const FirstSlide = ({
               </Link>
               <Link
                 href={
-                  social.find((s) => s.key.includes('telegram'))?.content ?? ''
+                  social?.find((s) => s.key.includes('telegram'))?.content ?? ''
                 }
               >
                 <Image
@@ -110,7 +111,7 @@ const FirstSlide = ({
               </Link>
               <Link
                 href={
-                  social.find((s) => s.key.includes('whatsapp'))?.content ?? ''
+                  social?.find((s) => s.key.includes('whatsapp'))?.content ?? ''
                 }
               >
                 <Image
