@@ -31,7 +31,9 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
           <span className="text-secondary text-center">ارتباط با ما</span>
           <div className="flex flex-row-reverse items-center gap-4 text-gray-700">
             <Link
-              href={social.find((s) => s.key.includes('instagram')).content}
+              href={
+                social.find((s) => s.key.includes('instagram'))?.content ?? ''
+              }
             >
               <Image
                 src={'/assets/images/instagram1.svg'}
@@ -40,7 +42,9 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
                 alt="instagram"
               />
             </Link>
-            <Link href={social.find((s) => s.key.includes('ita')).content}>
+            <Link
+              href={social.find((s) => s.key.includes('ita'))?.content ?? ''}
+            >
               <Image
                 src={'/assets/images/Youtube1.svg'}
                 width={20}
@@ -48,7 +52,11 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
                 alt="ita"
               />
             </Link>
-            <Link href={social.find((s) => s.key.includes('telegram')).content}>
+            <Link
+              href={
+                social.find((s) => s.key.includes('telegram'))?.content ?? ''
+              }
+            >
               <Image
                 src={'/assets/images/telegram1.svg'}
                 width={20}
@@ -56,7 +64,11 @@ function MobileLanding({ categories, posts, audios, movies, social }) {
                 alt="telegram"
               />
             </Link>
-            <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+            <Link
+              href={
+                social.find((s) => s.key.includes('whatsapp'))?.content ?? ''
+              }
+            >
               <Image
                 src={'/assets/images/whatsapp1.svg'}
                 width={20}

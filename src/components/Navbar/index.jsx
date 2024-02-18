@@ -24,7 +24,11 @@ export default function Navbar({ onClose, social }) {
           />
         </button>
         <div className="flex flex-row items-center gap-4">
-          <Link href={social.find((s) => s.key.includes('instagram')).content}>
+          <Link
+            href={
+              social.find((s) => s.key.includes('instagram'))?.content ?? ''
+            }
+          >
             <Image
               src={'/assets/images/instagram.svg'}
               width={20}
@@ -32,7 +36,7 @@ export default function Navbar({ onClose, social }) {
               alt="instagram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('ita')).content}>
+          <Link href={social.find((s) => s.key.includes('ita'))?.content ?? ''}>
             <Image
               src={'/assets/images/group.svg'}
               width={20}
@@ -40,7 +44,9 @@ export default function Navbar({ onClose, social }) {
               alt="ita"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('telegram')).content}>
+          <Link
+            href={social.find((s) => s.key.includes('telegram'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/Auto-added frame.svg'}
               width={20}
@@ -48,7 +54,9 @@ export default function Navbar({ onClose, social }) {
               alt="telegram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+          <Link
+            href={social.find((s) => s.key.includes('whatsapp'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/whatsapp.svg'}
               width={20}
@@ -69,7 +77,7 @@ export default function Navbar({ onClose, social }) {
       <button onClick={toggleMenu} className="absolute top-2 left-2">
         ×
       </button>
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center pl-10 ">
         <ul className="flex justify-start gap-10">
           <li>
             <Link href="/mabahes">مباحث</Link>
@@ -92,7 +100,11 @@ export default function Navbar({ onClose, social }) {
         </ul>
 
         <div className="flex flex-row items-center gap-4">
-          <Link href={social.find((s) => s.key.includes('instagram')).content}>
+          <Link
+            href={
+              social.find((s) => s.key.includes('instagram'))?.content ?? ''
+            }
+          >
             <Image
               src={'/assets/images/instagram.svg'}
               width={20}
@@ -100,7 +112,7 @@ export default function Navbar({ onClose, social }) {
               alt="instagram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('ita')).content}>
+          <Link href={social.find((s) => s.key.includes('ita'))?.content ?? ''}>
             <Image
               src={'/assets/images/group.svg'}
               width={20}
@@ -108,7 +120,9 @@ export default function Navbar({ onClose, social }) {
               alt="ita"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('telegram')).content}>
+          <Link
+            href={social.find((s) => s.key.includes('telegram'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/Auto-added frame.svg'}
               width={20}
@@ -116,7 +130,9 @@ export default function Navbar({ onClose, social }) {
               alt="telegram"
             />
           </Link>
-          <Link href={social.find((s) => s.key.includes('whatsapp')).content}>
+          <Link
+            href={social.find((s) => s.key.includes('whatsapp'))?.content ?? ''}
+          >
             <Image
               src={'/assets/images/whatsapp.svg'}
               width={20}
