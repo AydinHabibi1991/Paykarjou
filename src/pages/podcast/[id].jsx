@@ -137,6 +137,26 @@ function SinglePodcast({ audio, audios }) {
             <span>رادیو اقتصاد</span>
             <h1 className="text-2xl font-semibold">{audio?.title}</h1>
           </div>
+          <div className="w-full flex items-center justify-start gap-3 text-gray-500 mt-1 text-xs">
+            <div>
+              <span>تاریخ : </span>
+              <span>
+                {new Date(audio?.updated_at).toLocaleDateString('fa-ir', {
+                  month: 'long',
+                  year: 'numeric',
+                  day: 'numeric',
+                })}
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <span>برچسب ها : </span>
+              <div className="flex items-center gap-3 justify-center flex-wrap divide-x">
+                {audio?.tags.map((tag) => (
+                  <span key={tag.name}>{tag.label}</span>
+                ))}
+              </div>
+            </div>
+          </div>
           <div
             className={`w-full p-2 border bg-secondary border-primary rounded-sm overflow-hidden flex flex-col gap-1 items-center justify-between`}
           >

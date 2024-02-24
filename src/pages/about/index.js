@@ -6,7 +6,7 @@ import MainLayout from '@/layout/MainLayout';
 const About = ({ aboutUs }) => {
   return (
     <div className="bg-secondary flex items-start justify-center h-full">
-      <div className="w-[85%] h-full flex items-start justify-start">
+      <div className="w-[85%] h-full flex items-start justify-start relative">
         <div className="w-9/12 h-full p-5 overflow-y-auto mt-40">
           <div className="text-sm text-[#E98074]">درباره من</div>
 
@@ -141,38 +141,8 @@ const About = ({ aboutUs }) => {
 </div> */}
         </div>
 
-        <div className="w-3/12 bg-primary h-full flex flex-col items-center justify-between p-5 ">
-          <div className="flex items-center justify-start gap-3 flex-col">
-            <Image
-              src={'/assets/images/paykarjoo.png'}
-              width={400}
-              height={300}
-              alt="paykarjoo"
-            />
-            <Image
-              src={'/assets/images/paykarjoo.png'}
-              width={400}
-              height={300}
-              alt="paykarjoo"
-            />
-            <Image
-              src={'/assets/images/paykarjoo.png'}
-              width={400}
-              height={300}
-              alt="paykarjoo"
-            />
-            <Image
-              src={'/assets/images/paykarjoo.png'}
-              width={400}
-              height={300}
-              alt="paykarjoo"
-            />
-            <Image
-              src={'/assets/images/paykarjoo.png'}
-              width={400}
-              height={300}
-              alt="paykarjoo"
-            />
+        <div className="w-3/12 bg-primary fixed left-10 h-screen flex flex-col items-center justify-between p-2 ">
+          <div className="flex items-center justify-start gap-3 flex-col mt-20">
             <Image
               src={'/assets/images/paykarjoo.png'}
               width={400}
