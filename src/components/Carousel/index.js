@@ -5,7 +5,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Image from 'next/image'; 
-import Mass from '../mass';
+
 
 export default function Carousel({ gallery }) {
   return (
@@ -43,7 +43,7 @@ export default function Carousel({ gallery }) {
             </SwiperSlide>
           ))}
       </Swiper>
-      <Mass />
+      
     </div>
   );
 }
