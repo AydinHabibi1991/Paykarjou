@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c61c97e2-9e80-49aa-9fc8-51be4f8754db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/MainLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +47,22 @@
       <workItem from="1706974127120" duration="2593000" />
       <workItem from="1707567060129" duration="2003000" />
       <workItem from="1707721066661" duration="105000" />
+      <workItem from="1708065605177" duration="2531000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/layout/MainLayout.jsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
