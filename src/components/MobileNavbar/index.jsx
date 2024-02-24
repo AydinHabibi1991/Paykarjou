@@ -71,7 +71,7 @@ export default function MobileNavbar({ onClose, social }) {
         </div>
       </div>
       <div
-        className={`absolute bg-secondary  border-2 border-gray-300 rounded-md shadow-md mt-16 p-4 w-full transition duration-300 transform origin-top-right ${
+        className={`absolute bg-secondary z-50 border-2 border-gray-300 rounded-md shadow-md mt-16 p-4 w-full transition duration-300 transform origin-top-right ${
           isCollapsed ? 'scale-100' : 'scale-0'
         }`}
       >
