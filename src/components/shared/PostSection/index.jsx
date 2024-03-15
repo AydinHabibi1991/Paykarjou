@@ -50,7 +50,7 @@ const PostSection = ({ post }) => {
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-start gap-3 text-gray-500 mt-3 text-xs">
+      <div className="w-full flex flex-wrap items-center justify-start gap-3 text-gray-500 mt-3 text-xs">
         <div>
           <span>تاریخ : </span>
           <span>
@@ -72,13 +72,13 @@ const PostSection = ({ post }) => {
       </div>
 
       <div className="mt-4">
-        <div className="text-[#E98074]">
+        <p className="text-[#E98074] max-w-[calc(100% - 1rem)] overflow-hidden">
           <strong>{post?.description}</strong>
-        </div>
-        <div
-          className="text-gray-500 text-xs sm:text-sm"
+        </p>
+        <p
+          className="text-gray-500 text-xs sm:text-sm max-w-[calc(100% - 1rem)] overflow-hidden"
           dangerouslySetInnerHTML={{ __html: post?.content }}
-        ></div>
+        ></p>
       </div>
     </div>
   );
